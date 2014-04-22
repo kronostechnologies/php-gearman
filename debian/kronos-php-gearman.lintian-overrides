@@ -1,0 +1,4 @@
+package-depends-on-hardcoded-libc
+arch-independent-package-contains-binary-or-object 
+unstripped-binary-or-object 
+missing-dependency-on-phpapi

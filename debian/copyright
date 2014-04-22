@@ -1,0 +1,9 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: kronos-php-gearman
+
+Files: *
+Copyright: Copyright (c) 2013 PHP
+License: PHP
+
+License: PHP
+ See php license for more information

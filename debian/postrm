@@ -1,0 +1,24 @@
+#!/bin/bash
+#DEBHELPER#
+
+set -e
+
+if [ -f /etc/php5/conf.d/30-gearman.ini ];
+then
+    rm -f /etc/php5/conf.d/30-gearman.ini
+fi
+
+if [ -f /etc/php5/mods-available/30-gearman.ini ];
+then
+    rm -f /etc/php5/mods-available/30-gearman.ini
+fi
+
+if [ -f /usr/lib/php5/20090626/gearman.so ];
+then 
+    rm -f /usr/lib/php5/20090626/gearman.so
+fi 
+
+if [ -f /usr/lib/php5/20100525/gearman.so ];
+then 
+    rm -f /usr/lib/php5/20100525/gearman.so
+fi 

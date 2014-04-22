@@ -1,0 +1,13 @@
+Source: kronos-php-gearman
+Section: non-free/misc
+Priority: optional
+Maintainer: System Administrator <sysadmin@kronostechnologies.com>
+Build-Depends: debhelper (>= 8.0.0), python
+Standards-Version: 3.9.4
+
+Package: kronos-php-gearman
+Architecture: all
+Depends: ${misc:Depends}, libc6, libgearman6, php5-common
+Description: PHP Gearman extension 
+ The PHP gearman plugin for php build 20090626 
+ and 20100525 (Ubuntu Precise and Debian Wheezy)

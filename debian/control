@@ -7,7 +7,7 @@ Standards-Version: 3.9.4
 
 Package: kronos-php-gearman
 Architecture: all
-Depends: ${misc:Depends}, libc6, libgearman6, php5-common
+Depends: ${misc:Depends}, libc6, libgearman6, php5-cli
 Description: PHP Gearman extension 
  The PHP gearman plugin for php build 20090626 
  and 20100525 (Ubuntu Precise and Debian Wheezy)

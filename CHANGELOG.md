@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+1.0.5-1
+-------
+
+* Set php-cli as dependency instead of php-common
+
 1.0.5
 ------
 

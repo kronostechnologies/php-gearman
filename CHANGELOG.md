@@ -5,6 +5,7 @@ CHANGELOG
 -------
 
 * Set php-cli as dependency instead of php-common
+* bump
 
 1.0.5
 ------

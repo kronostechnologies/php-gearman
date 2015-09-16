@@ -1,16 +1,18 @@
 #!/bin/bash
 #DEBHELPER#
 set -e
-PHP_CONF_FILE=/etc/php5/conf.d/30-gearman.ini
+PHP_CONF_FILE=/etc/php5/mods-available/gearman.ini
 
 build=$(php -r \@phpinfo\(\)\; | grep 'PHP Extension Build' | awk '{print $5}')
 if [ "$build" == "API20090626,NTS" ]
 then
-    echo "extension=/usr/lib/php5/20090626/gearman.so" > $PHP_CONF_FILE
+    echo "; priority=30" > $PHP_CONF_FILE
+    echo "extension=/usr/lib/php5/20090626/gearman.so" >> $PHP_CONF_FILE
     ln -sf /usr/lib/php5/20090626/gearman.so.20090626 /usr/lib/php5/20090626/gearman.so
 elif [ "$build" == "API20100525,NTS" ]
 then
-    echo "extension=/usr/lib/php5/20100525/gearman.so" > $PHP_CONF_FILE
+    echo "; priority=30" > $PHP_CONF_FILE
+    echo "extension=/usr/lib/php5/20100525/gearman.so" >> $PHP_CONF_FILE
     ln -sf /usr/lib/php5/20100525/gearman.so.20100525 /usr/lib/php5/20100525/gearman.so
 else
     echo "error: this version of php is not supported by kronos-php-gearman"
@@ -19,6 +21,6 @@ fi
 
 rm -f /etc/php/mods-available/30-gearman.ini
 # Create symbolic links
-if [ -d /etc/php5/mods-available/ ];then
-    ln -sf $PHP_CONF_FILE /etc/php5/mods-available/30-gearman.ini
+if [ -d /etc/php5/conf.d/ ];then
+    ln -sf $PHP_CONF_FILE /etc/php5/conf.d/30-gearman.ini
 fi

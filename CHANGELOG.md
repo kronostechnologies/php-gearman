@@ -5,6 +5,7 @@ CHANGELOG
 -----
 
 * Set config to be in /etc/php5/mods-available to respect debian standard
+* bump
 
 1.0.6
 -----
